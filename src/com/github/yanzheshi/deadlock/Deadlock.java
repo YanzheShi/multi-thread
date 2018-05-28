@@ -43,6 +43,7 @@ class MyThread extends Thread {
             if (list.size() == 0) {
                 try {
                     //等待其他线程在list里面添加元素
+                    //注意， wait/notify必须是由锁对象来调用
                     lock.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

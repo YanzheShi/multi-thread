@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * 写一个必然死锁的程序
+ * 死锁原因，两个线程都在进入了等待。
  * @author shiyanzhe
  */
 public class Deadlock {

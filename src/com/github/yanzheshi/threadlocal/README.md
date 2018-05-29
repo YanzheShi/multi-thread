@@ -5,6 +5,6 @@
 的线程都存有一份独立的副本，因此get总是返回由当前执行线程在调用set时设置的最新值。
 
 其实现原理是ThreadLocal封装了一个Map， 这个Map的键是当前线程， 值为ThreadLocal
-存储的对象。
+存储的对象。 每个线程的初始值为initialValue()方法设置的初始值
 
 ThreadLocal常用来解决数据库连接，Session管理等。

@@ -1,0 +1,10 @@
+#ThreadLocal
+
+维持线程封闭性的一种规范方法是使用ThreadLocal，这个类能使线程中的某个值与保存至的
+对象关联起来。ThreadLocal提供了get与set等访问接口或方法，这些方法为每个使用该变量
+的线程都存有一份独立的副本，因此get总是返回由当前执行线程在调用set时设置的最新值。
+
+其实现原理是ThreadLocal封装了一个Map， 这个Map的键是当前线程， 值为ThreadLocal
+存储的对象。
+
+ThreadLocal常用来解决数据库连接，Session管理等。

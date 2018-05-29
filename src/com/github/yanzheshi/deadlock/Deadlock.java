@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 写一个必然死锁的程序
- * 死锁原因，两个线程都在进入了等待。
+ * 死锁原因，两个线程都在等待另一个线程去给list添加元素。
  * @author shiyanzhe
  */
 public class Deadlock {
@@ -44,6 +44,7 @@ class MyThread extends Thread {
                 try {
                     //等待其他线程在list里面添加元素
                     //注意， wait/notify必须是由锁对象来调用
+                    //否则导致 IllegalMonitorStateException
                     lock.wait();
                 } catch (InterruptedException e) {
                     e.printStackTrace();

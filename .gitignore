@@ -1,11 +1,12 @@
-/target
+/out
 *.iml
 *.settings
 *.project
 *.idea
 *.classpath
-*/target/*
+*/out/*
 node_modules
+/out
 target.
 *.eslintrc.js
 .vscode/settings.json
